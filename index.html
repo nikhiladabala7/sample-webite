@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SRM Classroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="forest">
+
+<!-- LOGIN -->
+<div id="loginBox" class="authBox">
+    <h2>SRM Login</h2>
+    <input type="email" id="loginEmail" placeholder="SRM Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p onclick="showSignup()">Create Account</p>
+</div>
+
+<!-- SIGNUP -->
+<div id="signupBox" class="authBox hidden">
+    <h2>Signup</h2>
+    <input type="text" id="admission" placeholder="Admission Number">
+    <input type="email" id="email" placeholder="SRM Email">
+    <input type="password" id="password" placeholder="Password">
+    <select id="role">
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+    </select>
+    <button onclick="signup()">Register</button>
+    <p onclick="showLogin()">Back</p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden dashboard">
+
+    <div class="sidebar">
+        <h2>SRM</h2>
+        <button onclick="logout()">Logout</button>
+        <button onclick="enterClassroom()">CSE M</button>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="grid">
+            <div class="card" onclick="openSection('Assignments')">Assignments</div>
+            <div class="card" onclick="openSection('Tutorials')">Tutorials</div>
+            <div class="card" onclick="openSection('Notes')">Notes</div>
+            <div class="card" onclick="openSection('Resources')">Resources</div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CLASSROOM -->
+<div id="classroomPage" class="hidden dashboard">
+
+    <div class="sidebar">
+        <button onclick="goBack()">⬅ Back</button>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>CSE M Classroom</h1>
+        </div>
+
+        <div class="postCreator">
+            <input type="text" id="postTitle" placeholder="Assignment Title">
+            <textarea id="postContent" placeholder="Write details..."></textarea>
+            <button onclick="addPost()">Post</button>
+        </div>
+
+        <div id="postList" class="postList"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
