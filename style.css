@@ -179,3 +179,54 @@ textarea {
     border-radius: 10px;
     border: 1px solid #00eaff;
 }
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* Stack layout instead of side-by-side */
+    .dashboard {
+        flex-direction: column;
+    }
+
+    /* Sidebar becomes top bar */
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-right: none;
+        border-bottom: 1px solid #00eaff;
+        padding: 10px;
+    }
+
+    /* Main content spacing */
+    .main {
+        padding: 15px;
+    }
+
+    /* Grid becomes single column */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards smaller */
+    .card {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    /* Inputs full width */
+    input, textarea, select {
+        width: 100%;
+    }
+
+    /* Auth box better fit */
+    .authBox {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Post creator */
+    .postCreator {
+        padding: 15px;
+    }
+}
